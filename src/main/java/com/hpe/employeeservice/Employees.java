@@ -5,5 +5,15 @@ import java.util.List;
 
 public class Employees {
     //create an empty List that will store employee objects 
-    private List<Employee> employee= new ArrayList<>();
+    private List<Employee> employees= new ArrayList<>();
+
+    //Return The Full List Of Employee
+    public List<Employee> getEmployees(){
+        return employees;
+    }
+
+    //Add New Employee
+    public Void addEmployee(Employee employee){
+        employees.Add(employee);
+    }
 }
