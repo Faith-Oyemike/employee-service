@@ -1,19 +1,20 @@
-package com.hpe.employeeservice;// Defines the package this class belongs to
-
-import java.util.ArrayList;//import Array list from utilities 
+package com.hpe.employeeservice;
+import java.util.ArrayList; 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 public class Employees {
-    //create an empty List that will store employee objects 
+    
+     @JsonProperty("Employees")
     private List<Employee> employees= new ArrayList<>();
-
-    //Return The Full List Of Employee
+   
+    
     public List<Employee> getEmployees(){
         return employees;
     }
 
     //Add New Employee
-    public Void addEmployee(Employee employee){
-        employees.Add(employee);
+    public void addEmployee(Employee employee){
+        employees.add(employee);
     }
 }

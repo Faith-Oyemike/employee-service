@@ -1,62 +1,36 @@
 package com.hpe.employeeservice;
 
+//lombok creates the getter and setter for u for shortcut
+import lombok.Getter;
+import lombok.Setter;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+
+// one employee: 5 fields, each tagged with the name it need too display in json -name tag
 public class Employee {
-    private String firstName;//object's variable
+   @JsonProperty("first_name")
+    private String firstName;
+    @JsonProperty("last_name")
     private String lastName;
+    @JsonProperty("employee_id")
     private String employeeId;
+    @JsonProperty("email")
     private String email;
+    @JsonProperty("title")
     private String title;
-
-
-
-    public Employee(){//the constructor that would be called 
-
-    }
-
-
-
-
-
-
- //Getter: return the Employee firstName
-public String getFirstName(){
-    return firstName;
 }
 
-// Setter: changes/sets the employee's first name
-public void setFirstName(string firstName){//parameter
-this.firstName = firstName;
-}
 
-public String getLastName() {
-    return lastName;
-}
 
-public void setLastName(String lastName) {
-    this.lastName = lastName;
-}
+    
 
-public String getEmployeeId() {
-    return employeeId;
-}
 
-public void setEmployeeId(String employeeId) {
-    this.employeeId = employeeId;
-}
 
-public String getEmail() {
-    return email;
-}
-
-public void setEmail(String email) {
-    this.email = email;
-}
-
-public String getTitle() {
-    return title;
-}
-
-public void setTitle(String title) {
-    this.title = title;
-}
-}
