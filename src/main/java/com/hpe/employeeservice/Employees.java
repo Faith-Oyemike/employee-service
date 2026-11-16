@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Employees {
     
      @JsonProperty("Employees")
+     // return the full employee list
     private List<Employee> employees= new ArrayList<>();
    
     
@@ -13,8 +14,13 @@ public class Employees {
         return employees;
     }
 
-    //Add New Employee
-    public void addEmployee(Employee employee){
+    // replace the whole employee list
+     public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
+
+    // add one employee to the list
+    public void addEmployee(Employee employee) {
         employees.add(employee);
     }
 }
